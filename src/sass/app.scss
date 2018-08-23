@@ -1,0 +1,28 @@
+@import "../../dist/fonts/fonts.css";
+
+@import "config/variables";
+
+@import "~bootstrap/scss/bootstrap";
+@import "~animate.css/animate.min.css";
+
+@import "base/body";
+@import "base/section";
+@import "base/btn";
+@import "base/preloader";
+
+@import "modules/menu";
+@import "modules/section-title";
+@import "modules/section-description";
+@import "modules/section-menu";
+@import "modules/feedback-modal";
+
+@import "layout/app-header";
+@import "layout/header-banner";
+@import "layout/about";
+@import "layout/briefcases";
+@import "layout/team";
+@import "layout/services";
+@import "layout/reviews";
+@import "layout/app-footer";
+
+@import "layout/briefcases-page";

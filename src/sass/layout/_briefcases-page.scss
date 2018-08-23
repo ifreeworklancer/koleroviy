@@ -1,0 +1,61 @@
+#fullpage-briefcases {
+}
+
+.briefcases-page {
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .section-title-container {
+        margin-right: 100px;
+        margin-top: 165px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+        max-height: 390px;
+        right: 0;
+        bottom: 0;
+        background: url('../images/decoration/briefcases/briefcases-item-decor.png') 0 0 / cover no-repeat;
+    }
+}
+
+.briefcases-page-item {
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    &__description {
+        font-size: 18px;
+    }
+
+    &-info {
+
+        .info {
+            width: 100%;
+            max-width: 120px;
+
+            .info-text__title {
+                font-size: 14px;
+                color: #b4b4b4;
+            }
+        }
+
+        .briefcases-page-decoration-line {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: -3000px;
+            height: 2px;
+            background-color: #fff;
+        }
+    }
+}

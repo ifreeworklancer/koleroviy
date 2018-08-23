@@ -1,0 +1,107 @@
+body.fp-viewing-about {
+    
+    #app-header {
+
+        .logo {
+            display: inline-block;
+            cursor: pointer;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                display: none;
+            }
+        }
+        .logo--dark {
+            display: none;
+        }
+        
+        .menu-button {
+            background-color: #000;
+
+            &.active {
+                background-color: transparent;
+
+                .menu-button-decor-line {
+                    background-color: #000;
+                }
+            }
+
+            &-decor-line {
+                background-color: #fff;
+            }
+            
+            &__title {
+                color: #fff;
+            }
+        
+            &-decor-triangle {
+        
+                &::after {
+                    content: ''; 
+                    position: absolute; 
+                    top: 15px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border: 5px solid transparent; 
+                    border-top: 5px solid #fff; 
+                    transition: .5s;
+                }
+            }
+        }
+    }
+}
+
+body.fp-viewing-briefcases,
+body.fp-viewing-team,
+body.fp-viewing-services,
+body.fp-viewing-reviews,
+body.fp-viewing-briefcases-first,
+body.fp-viewing-briefcases-second,
+body.fp-viewing-briefcases-third {
+    @extend body.fp-viewing-about;
+}
+
+body.fp-viewing-team,
+body.fp-viewing-services,
+body.fp-viewing-reviews
+ {
+
+    #app-header {
+
+        .connect {
+            color: $dark;
+
+            &:hover {
+                border-color: $dark;
+            }
+        }
+        .logo {
+            display: none;
+        }
+        .logo--dark {
+            display: inline-block;
+            cursor: pointer;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                display: none;
+            }
+        }
+    }
+}
+
+body.fp-viewing-footer {
+
+    #app-header {
+
+        .logo {
+            display: inline-block;
+            cursor: pointer;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                display: none;
+            }
+        }
+        .logo--dark {
+            display: none;
+        }
+    }
+}

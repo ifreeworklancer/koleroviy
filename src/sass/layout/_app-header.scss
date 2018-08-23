@@ -1,0 +1,41 @@
+#app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+    .container-fluid {
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding: 0 0 0 15px;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+            width: 80%;
+        }
+    }
+
+    .logo {
+        display: none;
+        cursor: auto;
+    }
+
+    .logo--dark {
+       @extend .logo;
+    }
+
+    
+
+    .connect {
+        font-family: 'Monitorica', sans-serif;
+        margin-left: auto;
+        margin-right: 100px;
+        color: #fff;
+        border-bottom: 1px solid transparent;
+        transition: .5s;
+
+        &:hover {
+            border-bottom: 1px solid #fff;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.section-title-container {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        bottom: 0;
+        width: 80px;
+        height: 20px;
+        background-color: #acacac;
+        z-index: 1;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            left: -10px;
+            width: 60px;
+        }
+    }
+}
+
+.section-title {
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    z-index: 2;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 28px;
+    }
+}

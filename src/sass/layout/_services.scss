@@ -1,0 +1,181 @@
+#services-section {
+
+    @media (max-width: 1300px) {
+
+        &::before {
+            display: none;
+        }
+    
+        &::after {
+            display: none;
+        }
+    }
+
+    .container {
+        padding-top: 100px;
+        
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding-top: 50px;
+        }
+
+        @media (max-width: 1300px) {
+            padding-top: 50px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: -70px;
+        bottom: 10%;
+        width: 140px;
+        height: 140px;
+        background-color: #000;
+        border-radius: 50%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../images/decoration/services/services-line.png') 100% 0 no-repeat;
+        z-index: -999;
+    }
+
+    .services-description {
+        z-index: -99 !important;
+    }
+}
+
+.services-card {
+
+    &-item {
+        position: relative;
+        width: 100%;
+        max-width: 380px;
+        padding: 200px 45px 30px 30px;
+        border-radius: 0 30px 0 30px;
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: .5s;
+
+        @media (max-width: 1300px) {
+            padding: 100px 15px 30px;
+        }
+          
+
+        &__name {
+            font-family: 'Monitorica', sans-serif;
+            font-size: 18px;
+        }
+        
+        &__more-info {
+
+            svg {
+                margin-left: 10px;
+                transform: rotate(90deg);
+                right: 0;
+                transition: .5s;
+            }
+            &:hover {
+                
+                svg {
+                    right: -15px;
+                }  
+            }
+        }
+
+        &--center {
+            top: 60px;
+            left: -10px;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                top: 0;
+                left: 0;
+            }
+        }
+        &--bottom {
+            top: 120px;
+            left: -20px;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &.active {
+            position: absolute;
+            top: 150px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 100%;
+            height: 600px;
+            z-index: 9999;
+
+            &::before {
+                opacity: 0;
+            }
+        }
+
+        &:first-of-type {
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -40px;
+                right: -70px;
+                width: 300px;
+                height: 300px;
+                background-color: #000;
+                border-radius: 50%;
+                z-index: -10;
+                transition: .3s;
+
+                @media (max-width: map_get($grid-breakpoints, sm)) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.services-card-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 60px 40px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 9999 !important;
+
+    .services-card-item__close {
+
+        svg {
+            margin-right: 10px;
+            transform: rotate(-90deg);
+            left: 0;
+            transition: .5s;
+        }
+        &:hover {
+            
+            svg {
+                left: -15px;
+            }  
+        }
+    }
+
+    .services-card-item__next {
+        @extend .services-card-item__more-info;
+    }
+}

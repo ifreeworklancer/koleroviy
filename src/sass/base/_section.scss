@@ -1,0 +1,13 @@
+section {
+    position: relative;
+    height: auto !important;
+
+    .fp-tableCell {
+        display: block;
+    }
+
+    &.fp-section.fp-table{
+        display: block !important; 
+        height: auto !important;
+    }
+}

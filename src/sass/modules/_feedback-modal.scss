@@ -1,0 +1,112 @@
+.feedback-modal {
+    display: none;
+    position: absolute;
+    top: 120px;
+    right: 120px;
+    width: 100%;
+    max-width: 715px;
+    padding: 70px 70px 40px 70px;
+    background-color: #fff;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 10px;
+    box-shadow: 0px 0px 43px 16px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        right: 0;
+        left: 0;
+        top: 110px;
+        padding: 30px 15px 20px;
+    }
+
+    .close-modal {
+        top: 25px;
+        right: 25px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: .6;
+        transition: .5s;
+        z-index: 999;
+
+        .line {
+            width: 40px;
+            height: 2px;
+            background-color: #b5b5b5;
+            top: 50%;
+
+            &__left {
+                transform: rotate(45deg);
+            }
+            &__right {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    #form-feedback-modal {
+        @extend #form-feedback;
+
+        .btn {
+            border-color: $dark !important;
+            color: $dark;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    
+        .form-group {
+            margin-bottom: 25px !important;
+    
+            .form-control {
+                color: $dark !important;
+            }
+    
+            &::before {
+                background-color: $dark !important;
+            }
+        }
+    }
+
+    .menu-nav-list {
+        margin-top: 30px;
+        margin-bottom: 0;
+
+        &__item {
+            text-align: right;
+            margin-bottom: 20px;
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                font-size: 18px;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .menu-social-list {
+        transform: none;
+        margin-top: 40px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            margin-top: 45px;
+        }
+    }
+
+    .contacts-block {
+        font-size: 18px;
+        font-family: 'Monitorica', sans-serif;
+        color: #a3a3a3;
+        max-width: 470px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            font-size: 14px;
+        }
+    }
+}

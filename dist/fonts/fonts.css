@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'TTNorms';
+    src: url('fonts/TTNormsRegular.eot');
+    src: url('fonts/TTNormsRegular.eot') format('embedded-opentype'),
+         url('fonts/TTNormsRegular.woff2') format('woff2'),
+         url('fonts/TTNormsRegular.woff') format('woff'),
+         url('fonts/TTNormsRegular.ttf') format('truetype'),
+         url('fonts/TTNormsRegular.svg#TTNormsRegular') format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Monitorica';
+    src: url('fonts/MonitoricaBd.eot');
+    src: url('fonts/MonitoricaBd.eot') format('embedded-opentype'),
+         url('fonts/MonitoricaBd.woff2') format('woff2'),
+         url('fonts/MonitoricaBd.woff') format('woff'),
+         url('fonts/MonitoricaBd.ttf') format('truetype'),
+         url('fonts/MonitoricaBd.svg#MonitoricaBd') format('svg');
+    font-weight: bold;
+}
+

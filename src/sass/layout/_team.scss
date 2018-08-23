@@ -1,0 +1,228 @@
+#team-section {
+    overflow: hidden;
+    background: url('../images/bg/team-bg.jpg') 50% 50% / cover no-repeat scroll;
+    
+    .fp-tableCell {
+        padding-top: 265px;
+        
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            padding-top: 50px;
+        }
+
+        @media (max-width: 1300px) {
+            padding-top: 100px;
+        }
+    }
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        &::after {
+            display: none;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 250px;
+        background: url('../images/decoration/team/decoration-bottom-left.png') 0 0 /cover no-repeat;
+
+        @media (max-width: 1300px) {
+            height: 200px;
+        }
+    }
+
+    .section-descriprion {
+        width: 100%;
+        max-width: 315px;
+        line-height: 1.5;
+
+        .btn {
+            border-color: #fff;
+        }
+    }
+}
+
+.team-decoration-top {
+
+    
+    @media (max-width: 1300px) {
+        
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -265px;
+        height: 110px;
+        background-color: #fff;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 40%;
+        right: 0;
+        top: -165px;
+        height: 150px;
+        background: url('../images/decoration/team/decoration-top.png') 0 0 /cover no-repeat;
+        z-index: 10;
+    }
+}
+
+.team-item-descriprion {
+    bottom: 40px;
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+       bottom: 0;
+    }
+
+    &__name {
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            color: #fff;
+        }
+    }
+
+    &__position {
+        font-size: 16px;
+        color: #9b9b9b;
+        border-bottom: 1px solid #9b9b9b;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            color: #fff;
+        }
+    }
+
+    &__text {
+        color: #272727;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+}
+
+.team-list {
+    width: 100%;
+    max-width: 750px;
+    right: auto;
+    left: 0;
+    right: 60px;
+    z-index: 11;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        top: 60%;
+    } 
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+        top: 40%;
+        left: auto;
+        right: 60px;
+    } 
+
+    &-img {
+        width: 100%;
+
+        &__item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 140px;
+            background-position: 50% 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 10;
+            cursor: pointer;
+            transition: .5s;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                width: 70px;
+                height: 70px;
+                left: 0;
+                position: relative;
+                display: inline-block;
+            }    
+
+            &.active {
+                width: 180px;
+                height: 180px;
+                top: -30px;
+                left: 45%;
+
+                @media (max-width: map_get($grid-breakpoints, md)) {
+                    width: 100px;
+                    height: 100px;
+                    top: 50%;
+                    left: 0;
+                } 
+            }
+        }
+    }
+
+    &-description {
+        margin-top: -15%;
+        left: 35%;
+        width: 365px;
+        height: 365px;
+        border-radius: 50%;
+        border: 3px dashed #acacac;
+        z-index: 9;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            display: none;
+        } 
+
+        &-item {
+            text-align: right;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+            pointer-events: none;
+            transition: .5s;
+
+            &__name {
+                font-size: 20px;
+                font-family: 'Monitorica', sans-serif;
+                font-weight: bold;
+                line-height: 1;
+            }
+
+            &__position {
+                font-size: 16px;
+                color: #9b9b9b;
+            }
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+    }
+}

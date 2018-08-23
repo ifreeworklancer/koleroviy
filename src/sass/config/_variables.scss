@@ -1,0 +1,24 @@
+$primary: #1b1b1b;
+$secondary: #191919;
+$light: #ebebeb;
+
+$body-color: #fff;
+$bg-color: #fff;
+
+$font-size-base: 1rem;
+$font-family-base: 'TTNorms', Arial, Helvetica, sans-serif;
+$headings-font-family: 'Monitorica', sans-serif;
+$headings-font-weight: bold;
+
+$link-hover-decoration:     none !default;
+$input-btn-focus-width:       0 !default;
+$input-btn-focus-color:       rgba(#fff, 0) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$border-radius: 15px;
+$btn-padding-x: 35px;
+$btn-padding-y: 15px;
+
+$h2-font-size:                $font-size-base * 2.5 !default;
+$h3-font-size:                $font-size-base * 1.5 !default;
+

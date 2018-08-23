@@ -1,0 +1,46 @@
+#header-banner-section {
+    background: url('../images/bg/header-bg.jpg') 50% 100% / cover no-repeat;
+
+    .scroll-down {
+        width: 150px;
+        bottom: 60px;
+        left: 15%;
+        transform: rotate(-90deg);
+        
+        &__line {
+            width: 3px;
+            height: 60px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+            background-position: 0 -100px;
+            background-size: 100% 200%;
+            animation: scrollDown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+            transform: rotate(90deg);
+        }
+        &__text {
+            font-size: 16px;
+        }
+    }
+
+    @keyframes scrollDown {
+        0%{
+            background-position: 0 -60px;
+        }
+        75% {
+            background-position: 0 0;
+        }
+        100%{
+            background-position: 0 60px;
+        }
+    }
+}
+
+.header-banner-description {
+    width: 100%;
+    max-width: 660px;
+    font-size: 36px;
+    line-height: 1.1;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        font-size: 22px;
+    }
+}

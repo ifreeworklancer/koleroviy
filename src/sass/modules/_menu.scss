@@ -1,0 +1,210 @@
+.menu-button {
+    background-color: #fff;
+    padding: 70px 25px 60px;
+    z-index: 99999;
+    user-select: none;
+    cursor: pointer;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding: 30px 30px 50px;
+    }
+
+    &.active {
+        background-color: transparent;
+
+        .menu-button-decor-line {
+            top: 50%;
+            left: 0;
+            opacity: .4;
+
+            &--top {
+                transform: rotate(45deg);
+            }
+
+            &--bottom {
+                width: 30px;
+                transform: rotate(-45deg);
+            }
+        }
+
+        .menu-button__title {
+            display: none;
+        }
+
+        .menu-button-decor-triangle {
+            display: none;
+        }
+    }
+
+    &-decor-line {
+        position: absolute;
+        top: 55px;
+        right: 0;
+        height: 3px;
+        background-color: #000;
+        
+
+        &--top {
+            width: 30px;
+            transition: .5s;
+        }
+
+        &--bottom {
+            top: 61px;
+            width: 25px;
+            transition: .5s;
+        }
+    }
+    
+    &__title {
+        font-family: 'Monitorica', sans-serif;
+        color: #000;
+    }
+
+    &-decor-triangle {
+        background: #fff;
+        position: relative;
+
+        &::after {
+            content: ''; 
+            position: absolute; 
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent; 
+            border-top: 5px solid #000; 
+            transition: .5s;
+        }
+    }
+
+    &:hover {
+
+        .menu-button-decor-line {
+           width: 100%;
+        }
+
+        .menu-button-decor-triangle {
+
+            &::after {
+                top: 30px;
+            }
+        }
+    }
+}
+
+.menu-content {
+    display: none;
+    top: 0;
+    left: 0;
+    padding: 160px 0 70px;
+    width: 100%;
+    height: 100vh;
+    background-color: #e8e8e8;
+    z-index: 9998;    
+    color: $primary;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        height: auto;
+    }
+
+    &__img {
+        left: 10%;
+        bottom: 130px;
+        width: 50%;
+        padding-top: 580px;
+        background: url('../images/bg/menu-bg.png') 50% 50% / cover no-repeat;
+        z-index: -1;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            display: none;
+        }
+        
+    }
+
+    &__title {
+        font-family: 'TTNorms', Arial, Helvetica, sans-serif;
+        font-weight: 300;
+        margin-bottom: 100px;
+        color: #484848;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.menu-social-list {
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        bottom: 20%;
+    }
+
+    &__item {
+        opacity: .6;
+        transition: .5s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.menu-nav {
+    width: 100%;
+    max-width: 220px;
+}
+
+.menu-nav-list {
+    display: block;
+    margin-top: 160px;
+    margin-bottom: 140px;
+    width: 100%;
+
+    @media (max-width: 1300px) {
+        margin-top: 0;
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        margin-bottom: 60px;
+        padding-left: 60px;
+        font-family: 'Monitorica', sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        color: #484848;
+        transition: .5s;
+
+        @media (max-width: 1300px) {
+            margin-bottom: 30px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5em;
+            width: 0;
+            max-width: 45px;
+            border-bottom: 1px solid #484848;
+            transition: .7s;
+        }
+
+        &:hover {
+            padding-left: 70px;
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}
+
